@@ -15,6 +15,7 @@
     /*Variables para letras*/
     --letra-comun: Arial, Helvetica, sans-serif;
     --color-letra: white;
+    --color-letra-oscuro: black;
     --tamaño-letra: 20px;
 
     /*Variables para el logo*/
@@ -24,6 +25,15 @@
     --altura-card: 300px;
     --ancho-card: 200px;
     --color-card: rgb(219, 219, 219);
+
+    /*Variables para los links del header*/
+    --color-hover-link: #00f0dc;
+
+    /*Variables de boton sidebar*/
+    --fondo-boton-sidebar: #e9e9e9;
+    --boton-sidebar-altura: 50px;
+    --boton-sidebar-anchura: 140px;
+    --color-hover-boton-sidebar: #0020ad;
 }
 
 body{ /*Aplicamos grid al body*/
@@ -54,7 +64,7 @@ header{ /*Aplicamos estilos al header*/
     object-fit: cover;
 }
 
-.contenido_navegador-logo{
+.contenido_navegador-logo{ /*Se aplica dimenciones y estilos al logo*/
     height: var(--logo-tamaño);
     width: var(--logo-tamaño);
     border-radius: 50%;
@@ -66,11 +76,18 @@ header{ /*Aplicamos estilos al header*/
     gap: 20px;
 }
 
-.link{
+.link{ /*Aplicamos */
     text-decoration: none;
     color: var(--color-letra);
     font-family: var(--letra-comun);
     font-size: var(--tamaño-letra);
+    font-weight: bold;
+}
+
+.link:hover{
+
+    color: var(--color-hover-link);
+    transition: 0.4s;
 }
 
 
@@ -79,6 +96,37 @@ aside{
     width: var(--ancho_sidebar);
     background-color: var(--fondo_sidebar);
     grid-area: sidebar;
+    padding: 20px;
+}
+
+.sidebar_nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.boton_nav_sidebar{
+    color: var(--color-letra-oscuro);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: var(--letra-comun);
+    font-size: var(--tamaño-letra);
+    background-color: var(--fondo-boton-sidebar);
+    height: var(--boton-sidebar-altura);
+    width: var(--boton-sidebar-anchura);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.541);
+}
+
+.boton_nav_sidebar:hover{
+    background-color: var(--color-hover-boton-sidebar);
+    color: var(--color-letra);
+    transition: 0.4s;
 }
 
 main{
@@ -87,12 +135,28 @@ main{
     padding: 20px;
 }
 
+.galeria{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .galeria-card{
     height: var(--altura-card);
     width: var(--ancho-card);
     background-color: var(--color-card);
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.541);
+    padding: 15px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
