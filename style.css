@@ -25,14 +25,21 @@
     --altura-card: 300px;
     --ancho-card: 200px;
     --color-card: rgb(219, 219, 219);
+    --card-imagen-altura: 180px;
+    --card-imagen-anchura: 180px;
+    
+    /*Varaibles para boton de card*/
+    --fondo-boton-card: #1943ff;
+    --alto-boton-card: 30px;
+    --ancho-boton-card: 70px;
 
     /*Variables para los links del header*/
     --color-hover-link: #00f0dc;
 
     /*Variables de boton sidebar*/
     --fondo-boton-sidebar: #e9e9e9;
-    --boton-sidebar-altura: 50px;
-    --boton-sidebar-anchura: 140px;
+    --boton-sidebar-altura: 60px;
+    --boton-sidebar-anchura: 150px;
     --color-hover-boton-sidebar: #0020ad;
 }
 
@@ -157,6 +164,27 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.galeria-card_imagen{
+    height: var(--card-imagen-altura);
+    width: var(--card-imagen-anchura);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.galeria-card_boton{
+    background-color: var(--fondo-boton-card);
+    height: var(--alto-boton-card);
+    width: var(--ancho-boton-card);
+    font-family: var(--letra-comun);
+    color: var(--color-letra);
+    font-size: var(--tamaño-letra);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
 }
 
 
