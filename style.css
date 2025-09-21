@@ -71,6 +71,11 @@ header{ /*Aplicamos estilos al header*/
     object-fit: cover;
 }
 
+.contenido_navegador-titulo{
+    color: var(--color-letra);
+    font-family: var(--letra-comun);
+}
+
 .contenido_navegador-logo{ /*Se aplica dimenciones y estilos al logo*/
     height: var(--logo-tamaño);
     width: var(--logo-tamaño);
@@ -192,4 +197,18 @@ main{
 footer{
     background-color: var(--fondo_pie-pagina);
     grid-area: footer;
+}
+
+.footer_contenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer_contenido-parrafo{
+    color: var(--color-letra);
+    font-family: var(--letra-comun);
+    font-size: var(--tamaño-letra);
 }
